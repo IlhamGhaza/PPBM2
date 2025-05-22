@@ -78,7 +78,39 @@ class _LoginPageState extends State<LoginPage> {
                     'Silahkan masuk untuk melanjutkan',
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
-
+AuthTextField(
+                    suffixIcon: const Icon(Icons.email),
+                    label: 'Email',
+                    controller: _emailController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your email';
+                      }
+                      return null;
+                    },
+                  ),
+                  AuthTextField(
+                    label: 'Password',
+                    controller: _passwordController,
+                    obscureText: _obscurePassword,
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscurePassword
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                      ),
+                      onPressed: _togglePasswordVisibility,
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your password';
+                      }
+                      if (value.length < 6) {
+                        return 'Password must be at least 6 characters long';
+                      }
+                      return null;
+                    },
+                  ),
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
@@ -99,7 +131,11 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                 
+                  AuthButton(
+                    text: 'Masuk',
+                    // isLoading: _isLoading,
+                    onPressed: _handleLogin,
+                  ),
 
                   const SizedBox(height: 5),
                   Row(
