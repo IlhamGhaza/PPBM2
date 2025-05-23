@@ -35,7 +35,42 @@ class _HomePageState extends State<HomePage> {
               horizontal: 16.0,
               vertical: 4.0,
             ),
-           
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return DetailPage(product: dummyProducts[index]);
+                    },
+                  ),
+                );
+              },
+              child: Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: ListTile(
+                  contentPadding: const EdgeInsets.all(10.0),
+                  title: Text(
+                    dummyProducts[index].name,
+                    style: const TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    dummyProducts[index].description,
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Text(
+                    'Rp ${dummyProducts[index].price.toStringAsFixed(0)}',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         },
       ),
