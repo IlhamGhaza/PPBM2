@@ -1,7 +1,7 @@
 
 # PPBM2 – Kumpulan Proyek Flutter
 
-Repositori ini berisi kumpulan proyek Flutter yang digunakan dalam praktikum mata kuliah **Pemrograman Perangkat Bergerak 2 (PPBM2)**. Setiap folder di dalam repositori ini merupakan aplikasi mandiri yang dapat dijalankan secara terpisah.
+Repositori ini berisi kumpulan proyek Flutter yang digunakan dalam praktikum mata kuliah **Praktikum Pemrograman Berbasis Mobile 2 (PPBM2)**. Setiap folder di dalam repositori ini merupakan aplikasi mandiri yang dapat dijalankan secara terpisah.
 
 ## Daftar Aplikasi
 
