@@ -3,14 +3,14 @@
 
 Repositori ini berisi kumpulan proyek Flutter yang digunakan dalam praktikum mata kuliah **Praktikum Pemrograman Berbasis Mobile 2 (PPBM2)**. Setiap folder di dalam repositori ini merupakan aplikasi mandiri yang dapat dijalankan secara terpisah.
 
-## Daftar Aplikasi
+<!-- ## Daftar Aplikasi
 
 
 | Folder       | Deskripsi Singkat                                   |
 | ------------ | --------------------------------------------------- |
 | `flutter_m5` | Aplikasi pertama: Register, login, product list     |
 | `flutter_m2` | Aplikasi kedua: [Deskripsi singkat]                 |
-| `flutter_m3` | Aplikasi ketiga: [Deskripsi singkat]                |
+| `flutter_m3` | Aplikasi ketiga: [Deskripsi singkat]                | -->
 
 
 <!-- W
@@ -48,6 +48,68 @@ Sebelum menjalankan aplikasi, pastikan Anda telah menginstal:
 4. **Jalankan aplikasi:**
 
    ```bash
+   flutter run
+   ```
+
+## Mengakses Versi Kode Sebelumnya
+
+Untuk melihat atau kembali ke versi kode sebelumnya di branch main/master, Anda dapat menggunakan perintah `git checkout` dengan hash commit yang diinginkan:
+
+1. **Lihat riwayat commit** untuk menemukan hash commit yang diinginkan:
+   ```bash
+   git log --oneline
+   ```
+   Contoh output:
+   ```
+   a1b2c3d (HEAD -> main, origin/main) Update fitur X
+   d4e5f6a Perbaiki bug pada halaman login
+   7890abc Tambah fitur baru
+   ```
+
+2. **Checkout ke commit tertentu** menggunakan hash-nya:
+   ```bash
+   git checkout d4e5f6a
+   ```
+   
+3. **Kembali ke versi terbaru** (setelah selesai melihat versi lama):
+   ```bash
+   git checkout main  # atau git checkout master
+   ```
+
+> **Catatan:** 
+> - Perubahan yang belum di-commit akan tetap ada saat melakukan checkout. Pastikan untuk commit atau stash perubahan Anda terlebih dahulu.
+> - Semua commit ada di branch main/master, jadi Anda bisa langsung checkout ke commit tertentu tanpa perlu pindah branch.
+> - Untuk melihat perubahan yang ada di commit tertentu, gunakan `git show d4e5f6a`
+
+## Berkontribusi
+
+1. **Buat branch baru** untuk fitur/perbaikan:
+   ```bash
+   git checkout -b nama-branch-anda
+   ```
+   
+2. **Commit perubahan** Anda:
+   ```bash
+   git add .
+   git commit -m "Deskripsi perubahan"
+   ```
+   
+3. **Push ke remote repository**:
+   ```bash
+   git push origin nama-branch-anda
+   ```
+
+4. Buat **Pull Request** di GitHub untuk menggabungkan perubahan Anda.
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+---
+
+Dibuat dengan ❤️ untuk keperluan pembelajaran PPBM2
+
+```bash
    flutter run
    ```
 
