@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_m5/presentation/home/home_page.dart';
-
-import 'presentation/auth/page/login_page.dart';
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
